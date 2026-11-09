@@ -1,0 +1,40 @@
+---
+import Arrow from '@/components/Arrow.astro';
+import { navigation } from '@/data/site';
+---
+
+<header class="site-header page-gutter">
+  <a href="#hero" class="wordmark" aria-label="Word — home">
+    Word.
+  </a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    {navigation.map(({ href, label }) => (
+      <a href={href}>{label}</a>
+    ))}
+    <a href="#contact" class="outline-link">
+      Let’s talk <Arrow />
+    </a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>
+      Menu{' '}
+      <span class="menu-symbol" aria-hidden="true">
+        +
+      </span>
+    </summary>
+    <nav aria-label="Mobile navigation">
+      {navigation.map(({ href, label }) => (
+        <a href={href}>
+          {label}
+          <Arrow />
+        </a>
+      ))}
+      <a href="#services">
+        Services <Arrow />
+      </a>
+      <a href="#contact">
+        Let’s talk <Arrow />
+      </a>
+    </nav>
+  </details>
+</header>

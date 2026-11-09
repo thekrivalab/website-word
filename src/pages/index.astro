@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SiteHeader from '@/components/SiteHeader.astro';
+import SiteFooter from '@/components/SiteFooter.astro';
+import Hero from '@/components/sections/Hero.astro';
+import Studio from '@/components/sections/Studio.astro';
+import Projects from '@/components/sections/Projects.astro';
+import Philosophy from '@/components/sections/Philosophy.astro';
+import Services from '@/components/sections/Services.astro';
+import Contact from '@/components/sections/Contact.astro';
+---
+
+<BaseLayout>
+  <SiteHeader />
+  <main id="main-content" tabindex="-1">
+    <Hero />
+    <Studio />
+    <Projects />
+    <Philosophy />
+    <Services />
+    <Contact />
+  </main>
+  <SiteFooter />
+</BaseLayout>

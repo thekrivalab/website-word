@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import stone from '@/assets/images/stone.png';
+import Arrow from '@/components/Arrow.astro';
+---
+
+<section
+  id="philosophy"
+  class="philosophy section-space page-gutter"
+  aria-labelledby="philosophy-title"
+>
+  <div class="philosophy-copy" data-reveal>
+    <div class="section-label">
+      <span>Our philosophy</span>
+      <span class="rule"></span>
+    </div>
+    <h2 id="philosophy-title" class="heading-editorial">
+      Less, but
+      <br />
+      more meaningful.
+    </h2>
+    <p class="lead">
+      We believe the most enduring spaces are the ones that leave room for life.
+      Honest materials. Natural light. A quiet connection to place.
+    </p>
+    <a href="#services" class="text-link">
+      Discover our services <Arrow direction="down" />
+    </a>
+  </div>
+  <div class="image-frame philosophy-image" data-reveal>
+    <Image
+      src={stone}
+      alt="Diagonal sunlight falls across a travertine wall and broad stone steps."
+      widths={[480, 720, 1080]}
+      sizes="(min-width: 768px) 44vw, 100vw"
+      format="webp"
+      loading="lazy"
+    />
+  </div>
+</section>

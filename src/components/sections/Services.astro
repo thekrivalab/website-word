@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import courtyard from '@/assets/images/courtyard.png';
+import { services } from '@/data/site';
+---
+
+<section
+  id="services"
+  class="page-gutter section-space"
+  aria-labelledby="services-title"
+>
+  <div class="services-heading" data-reveal>
+    <div>
+      <p class="eyebrow mb-7">What we do</p>
+      <h2 id="services-title" class="heading-editorial">
+        From the first idea
+        <br />
+        to the final detail.
+      </h2>
+    </div>
+    <div class="services-intro">
+      <p class="lead">
+        One considered vision,
+        <br />
+        at every scale.
+      </p>
+      <p class="body-copy mt-5">
+        Architecture, interiors, and spatial direction, brought together through
+        a single, coherent approach — thoughtful, practical, and lasting.
+      </p>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="image-frame services-image" data-reveal>
+      <Image
+        src={courtyard}
+        alt="Concrete eaves frame an oak-ceilinged room opening onto an olive garden."
+        widths={[480, 720]}
+        sizes="(min-width: 768px) 33vw, 100vw"
+        format="webp"
+        loading="lazy"
+      />
+    </div>
+    <div class="service-list" data-reveal>
+      {services.map((service, index) => (
+        <details class="service" name="services" open={index === 0}>
+          <summary>
+            <span class="service-number">0{index + 1}</span>
+            <h3>{service.title}</h3>
+            <span class="service-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="service-description">
+            <p>{service.description}</p>
+            <p class="service-scope">{service.scope}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

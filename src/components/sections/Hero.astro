@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import courtyard from '@/assets/images/courtyard.png';
+import Arrow from '@/components/Arrow.astro';
+---
+
+<section id="hero" aria-labelledby="hero-title">
+  <div class="hero-copy page-gutter">
+    <h1 id="hero-title">
+      Spaces for
+      <br />a slower life.
+    </h1>
+    <div class="hero-aside">
+      <p>
+        Considered architecture.
+        <br />
+        Meaningful living.
+      </p>
+      <a href="#projects" class="text-link">
+        Explore our work <Arrow direction="down" />
+      </a>
+    </div>
+  </div>
+  <div class="hero-media image-frame">
+    <Image
+      src={courtyard}
+      alt="A sunlit concrete courtyard home framed by an olive tree and lavender."
+      widths={[640, 960, 1440, 1920]}
+      sizes="100vw"
+      width={1920}
+      format="webp"
+      quality={85}
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+  <div class="hero-caption page-gutter">
+    <span>Architecture &amp; interiors</span>
+    <span>Thoughtfully made. Quietly lived.</span>
+  </div>
+</section>

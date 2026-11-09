@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import studio from '@/assets/images/studio.png';
+import Arrow from '@/components/Arrow.astro';
+---
+
+<section
+  id="studio"
+  class="section-space page-gutter"
+  aria-labelledby="studio-title"
+>
+  <div class="section-label" data-reveal>
+    <span>The studio</span>
+    <span class="rule"></span>
+  </div>
+  <div class="studio-grid">
+    <div class="image-frame studio-image" data-reveal>
+      <Image
+        src={studio}
+        alt="An oak studio table with drawings and stone samples beside a sunlit window."
+        widths={[480, 720, 1080]}
+        sizes="(min-width: 768px) 36vw, 100vw"
+        format="webp"
+        loading="lazy"
+      />
+    </div>
+    <div class="studio-copy" data-reveal>
+      <h2 id="studio-title" class="heading-editorial">
+        <span class="lg:block">Architecture begins</span>{' '}
+        <span class="lg:block">with how you</span>{' '}
+        <span class="lg:block">want to live.</span>
+      </h2>
+      <div class="studio-body">
+        <p class="lead">
+          We are Word, a contemporary architecture studio creating homes and
+          interiors shaped around the people who inhabit them.
+        </p>
+        <p class="body-copy mt-6">
+          We believe good architecture is personal — a careful response to your
+          life, your place, and the way you live, now and over time.
+        </p>
+        <a href="#philosophy" class="text-link mt-10">
+          Our approach <Arrow />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
