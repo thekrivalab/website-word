@@ -4,15 +4,15 @@ import { navigation } from '@/data/site';
 ---
 
 <header class="site-header page-gutter">
-  <a href="#hero" class="wordmark" aria-label="Word — home">
+  <a href="#hero" class="wordmark" aria-label="Word — início">
     Word.
   </a>
-  <nav class="desktop-nav" aria-label="Main navigation">
+  <nav class="desktop-nav" aria-label="Navegação principal">
     {navigation.map(({ href, label }) => (
       <a href={href}>{label}</a>
     ))}
     <a href="#contact" class="outline-link">
-      Let’s talk <Arrow />
+      Vamos conversar <Arrow />
     </a>
   </nav>
   <details class="mobile-menu">
@@ -22,7 +22,7 @@ import { navigation } from '@/data/site';
         +
       </span>
     </summary>
-    <nav aria-label="Mobile navigation">
+    <nav aria-label="Navegação móvel">
       {navigation.map(({ href, label }) => (
         <a href={href}>
           {label}
@@ -30,10 +30,10 @@ import { navigation } from '@/data/site';
         </a>
       ))}
       <a href="#services">
-        Services <Arrow />
+        Serviços <Arrow />
       </a>
       <a href="#contact">
-        Let’s talk <Arrow />
+        Vamos conversar <Arrow />
       </a>
     </nav>
   </details>

@@ -11,11 +11,11 @@ import Arrow from '@/components/Arrow.astro';
 >
   <div class="work-heading" data-reveal>
     <h2 id="projects-title" class="heading-display">
-      Selected work
+      Projetos selecionados
     </h2>
     <p class="body-copy">
-      An exploration of place, material
-      <br class="hidden lg:block" /> and everyday life.
+      Um olhar sobre o lugar, os materiais
+      <br class="hidden lg:block" /> e a vida cotidiana.
     </p>
   </div>
   <div class="project-grid">
@@ -44,7 +44,7 @@ import Arrow from '@/components/Arrow.astro';
               loading="lazy"
             />
             <span class="project-open">
-              Explore study <Arrow />
+              Conheça o estudo <Arrow />
             </span>
           </div>
           <div class="project-caption">
@@ -54,13 +54,15 @@ import Arrow from '@/components/Arrow.astro';
           <p class="project-category">{project.category}</p>
         </a>
         <details id={project.id} class="project-fallback">
-          <summary>About this concept</summary>
+          <summary>Sobre este conceito</summary>
           <p class="body-copy mt-4">{project.description}</p>
         </details>
       </article>
     ))}
   </div>
-  <p class="work-note">Two imagined homes. An ongoing exploration.</p>
+  <p class="work-note">
+    Duas casas imaginadas. Um olhar em constante construção.
+  </p>
 </section>
 {projects.map((project) => (
   <dialog
@@ -69,10 +71,10 @@ import Arrow from '@/components/Arrow.astro';
     aria-labelledby={`title-${project.id}`}
   >
     <div class="dialog-top">
-      <span class="eyebrow">Word / Concept study</span>
+      <span class="eyebrow">Word / Estudo conceitual</span>
       <form method="dialog">
-        <button class="dialog-close" aria-label="Close project">
-          Close <span aria-hidden="true">×</span>
+        <button class="dialog-close" aria-label="Fechar projeto">
+          Fechar <span aria-hidden="true">×</span>
         </button>
       </form>
     </div>
@@ -89,16 +91,16 @@ import Arrow from '@/components/Arrow.astro';
         <h2 id={`title-${project.id}`}>{project.title}</h2>
         <p class="body-copy">{project.description}</p>
         <dl>
-          <dt>Material palette</dt>
+          <dt>Materiais</dt>
           <dd>{project.materials}</dd>
-          <dt>Intention</dt>
+          <dt>Intenção</dt>
           <dd>{project.intention}</dd>
         </dl>
         <p class="concept-note">
-          A fictional concept study with AI-generated imagery.
+          Estudo conceitual fictício com imagens geradas por IA.
         </p>
         <a class="text-link" href="#contact" data-dialog-contact>
-          Discuss your project <Arrow />
+          Converse sobre seu projeto <Arrow />
         </a>
       </div>
     </div>

@@ -1,45 +1,45 @@
 export const site = {
   name: 'Word',
-  language: 'en',
+  language: 'pt-BR',
   description:
-    'Word is a contemporary architecture studio specializing in residential architecture, minimalist interiors, and thoughtful architectural experiences.',
+    'A Word é um estúdio de arquitetura contemporânea especializado em projetos residenciais, interiores minimalistas e espaços pensados para viver bem.',
 } as const;
 
 // Stable identifiers shared by page sections and navigation.
 export const plannedSections = [
-  { id: 'hero', label: 'Hero' },
-  { id: 'studio', label: 'Studio introduction' },
-  { id: 'projects', label: 'Selected projects' },
-  { id: 'philosophy', label: 'Design philosophy' },
-  { id: 'services', label: 'Services' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'hero', label: 'Apresentação' },
+  { id: 'studio', label: 'O estúdio' },
+  { id: 'projects', label: 'Projetos selecionados' },
+  { id: 'philosophy', label: 'Nossa filosofia' },
+  { id: 'services', label: 'Serviços' },
+  { id: 'contact', label: 'Contato' },
 ] as const;
 
 export type SectionId = (typeof plannedSections)[number]['id'];
 
 export const navigation = [
-  { href: '#studio', label: 'Studio' },
-  { href: '#projects', label: 'Work' },
-  { href: '#philosophy', label: 'Approach' },
+  { href: '#studio', label: 'Estúdio' },
+  { href: '#projects', label: 'Projetos' },
+  { href: '#philosophy', label: 'Abordagem' },
 ] as const;
 
 export const services = [
   {
-    title: 'Residential architecture',
+    title: 'Arquitetura residencial',
     description:
-      'Homes shaped by their landscape, your routines, and the possibilities in between. From the first sketch to the way the light falls in your favourite room.',
-    scope: 'New homes · Renovations · Extensions',
+      'Casas que nascem do encontro entre a paisagem, sua rotina e as possibilidades de cada lugar. Do primeiro esboço à luz que entra no seu ambiente favorito.',
+    scope: 'Casas novas · Reformas · Ampliações',
   },
   {
-    title: 'Interior design',
+    title: 'Design de interiores',
     description:
-      'Spaces that feel quietly your own. We bring materials, light, furniture, and the smallest details together into a natural, coherent whole.',
-    scope: 'Spatial planning · Materials · Furniture & lighting',
+      'Ambientes que acolhem e refletem quem você é. Materiais, luz, mobiliário e pequenos detalhes se encontram em um conjunto natural e harmonioso.',
+    scope: 'Planejamento de espaços · Materiais · Mobiliário e iluminação',
   },
   {
-    title: 'Spatial direction',
+    title: 'Concepção de espaços',
     description:
-      'A clear direction before the first line is drawn. We explore the potential of a place and help you define what matters, from initial concept to a considered brief.',
-    scope: 'Concept studies · Design consultation · Creative direction',
+      'Um caminho claro antes do primeiro traço. Exploramos o potencial de cada lugar e ajudamos a definir o que importa, do conceito inicial a um programa de necessidades bem pensado.',
+    scope: 'Estudos conceituais · Consultoria de projetos · Direção criativa',
   },
 ] as const;

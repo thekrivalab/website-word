@@ -5,24 +5,24 @@ import interior from '@/assets/images/interior.png';
 export const projects = [
   {
     id: 'courtyard-house',
-    title: 'Courtyard House',
-    category: 'Residential architecture',
+    title: 'Casa Pátio',
+    category: 'Arquitetura residencial',
     image: courtyard,
-    alt: 'An olive tree shades a concrete courtyard home opening onto a gravel garden.',
+    alt: 'Uma oliveira sombreia uma casa de concreto aberta para um pátio com jardim de pedriscos.',
     description:
-      'A home arranged around a quiet garden. Deep concrete thresholds temper the sunlight, while generous openings draw the landscape into everyday life.',
-    materials: 'Concrete, oak, limestone',
-    intention: 'A daily connection to the outdoors',
+      'Uma casa organizada ao redor de um jardim tranquilo. Os recuos de concreto suavizam a luz do sol, enquanto grandes aberturas trazem a paisagem para o dia a dia.',
+    materials: 'Concreto, carvalho e calcário',
+    intention: 'Uma conexão diária com o lado de fora',
   },
   {
     id: 'still-house',
-    title: 'Still House',
-    category: 'Architecture & interiors',
+    title: 'Casa Serena',
+    category: 'Arquitetura e interiores',
     image: interior,
-    alt: 'A warm oak living room with exposed beams, a linen sofa, and a travertine table.',
+    alt: 'Sala de estar acolhedora com vigas de carvalho aparentes, sofá de linho e mesa de travertino.',
     description:
-      'An interior built around the pleasure of staying in. Oak joinery, tactile stone, and soft linen create a warm, unhurried sequence of spaces.',
-    materials: 'Oak, travertine, linen',
-    intention: 'Warmth through restraint',
+      'Um interior pensado para o prazer de ficar em casa. Marcenaria de carvalho, a textura da pedra e a suavidade do linho criam uma sequência de ambientes acolhedores, para viver sem pressa.',
+    materials: 'Carvalho, travertino e linho',
+    intention: 'Acolhimento na simplicidade',
   },
 ] as const;

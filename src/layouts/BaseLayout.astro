@@ -1,5 +1,7 @@
 ---
 import { site } from '@/data/site';
+import courtyard from '@/assets/images/courtyard.png';
+import { getImage } from 'astro:assets';
 import '@/styles/global.css';
 import '@fontsource-variable/dm-sans/wght.css';
 
@@ -9,9 +11,26 @@ interface Props {
 }
 
 const {
-  title = `${site.name} — Architecture & Interiors`,
+  title = `${site.name} | Arquitetura e Interiores`,
   description = site.description,
 } = Astro.props;
+
+const canonicalUrl = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site)
+  : undefined;
+const socialImage = Astro.site
+  ? await getImage({
+      src: courtyard,
+      width: 1200,
+      height: 630,
+      fit: 'cover',
+      format: 'jpeg',
+    })
+  : undefined;
+const socialImageUrl =
+  socialImage && Astro.site
+    ? new URL(socialImage.src, Astro.site)
+    : undefined;
 ---
 
 <!doctype html>
@@ -23,14 +42,49 @@ const {
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#eeeae2" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    {
+      socialImageUrl && (
+        <>
+          <meta property="og:image" content={socialImageUrl} />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta
+            property="og:image:alt"
+            content="Casa contemporânea de concreto aberta para um pátio ensolarado com oliveira e lavandas."
+          />
+        </>
+      )
+    }
+    <meta
+      name="twitter:card"
+      content={socialImageUrl ? 'summary_large_image' : 'summary'}
+    />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {
+      socialImageUrl && (
+        <>
+          <meta name="twitter:image" content={socialImageUrl} />
+          <meta
+            name="twitter:image:alt"
+            content="Casa contemporânea de concreto aberta para um pátio ensolarado com oliveira e lavandas."
+          />
+        </>
+      )
+    }
     <title>{title}</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content">
-      Skip to content
+      Pular para o conteúdo
     </a>
     <slot />
   </body>

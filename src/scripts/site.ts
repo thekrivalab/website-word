@@ -84,7 +84,7 @@ form?.addEventListener('submit', (event) => {
   const download =
     document.querySelector<HTMLAnchorElement>('#enquiry-download');
   if (!result || !download) return;
-  const brief = `WORD — PROJECT ENQUIRY\n\nName: ${String(data.get('name')).trim()}\nEmail: ${String(data.get('email')).trim()}\n\nAbout the project\n${String(data.get('project')).trim()}\n\nPrepared locally at Word, a fictional architecture studio. This enquiry has not been sent.\n`;
+  const brief = `WORD — RESUMO DO PROJETO\n\nNome: ${String(data.get('name')).trim()}\nE-mail: ${String(data.get('email')).trim()}\n\nSobre o projeto\n${String(data.get('project')).trim()}\n\nPreparado no navegador para a Word, um estúdio de arquitetura fictício. Esta mensagem não foi enviada.\n`;
   if (enquiryUrl) URL.revokeObjectURL(enquiryUrl);
   enquiryUrl = URL.createObjectURL(
     new Blob([brief], { type: 'text/plain;charset=utf-8' }),

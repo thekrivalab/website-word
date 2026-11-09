@@ -34,6 +34,8 @@ npm run preview  # Serve the production build locally
 - `src/scripts/site.ts`: reveal effects, navigation, dialogs, and local enquiry builder.
 - `src/assets/images/`: four original AI-generated images, optimized by Astro.
 - `public/`: files served without processing, including the favicon.
+- `src/pages/robots.txt.ts`: crawl directives and a sitemap reference when a public
+  site URL is configured.
 - `output/references/`: six generated section references and the exact prompt set
   in `prompts.json`, produced with the built-in image generation tool.
 - `design.md`: original brief, preserved unchanged for the next design stage.
@@ -60,3 +62,12 @@ the supplied brief also mentions Atelier Norte. No deployment is configured.
 There is currently no automated unit or browser test suite. For UI changes, check
 mobile and laptop layouts, navigation, keyboard focus, dialog open/close behavior,
 service expansion, and enquiry validation/download in a browser.
+
+## Production SEO URLs
+
+Set `SITE_URL` to the site's absolute public origin (for example, the actual
+production URL) before building for release. Astro uses it for canonical URLs,
+absolute social preview URLs, sitemap generation, and the sitemap reference in
+`robots.txt`. Without `SITE_URL`, the build omits canonical and absolute share URLs,
+keeps crawl access open in `robots.txt`, and does not generate a sitemap. No
+placeholder domain is used.

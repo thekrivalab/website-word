@@ -734,6 +734,13 @@
   }
 }
 
+/* Reveal more of the architecture on shorter laptop viewports. */
+@media (min-width: 1024px) and (max-height: 800px) {
+  .hero-copy {
+    padding-block: clamp(48px, 4.5vw, 64px);
+  }
+}
+
 @media (max-width: 767px) {
   .site-header {
     min-height: 80px;
@@ -808,7 +815,8 @@
   }
   .hero-aside .text-link {
     margin-top: 0;
-    font-size: 13px;
+    font-size: 16px;
+    min-height: 44px;
     gap: 10px;
     white-space: nowrap;
   }

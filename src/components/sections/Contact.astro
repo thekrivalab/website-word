@@ -10,10 +10,10 @@ import Arrow from '@/components/Arrow.astro';
   aria-labelledby="contact-title"
 >
   <div class="contact-heading" data-reveal>
-    <p class="eyebrow">Start a conversation</p>
+    <p class="eyebrow">Vamos conversar</p>
     <div class="contact-title-row">
       <h2 id="contact-title" class="heading-display">
-        A place to begin.
+        Tudo começa aqui.
       </h2>
       <span class="contact-arrow" aria-hidden="true">
         <Arrow direction="right" />
@@ -24,7 +24,7 @@ import Arrow from '@/components/Arrow.astro';
     <div class="image-frame contact-image" data-reveal>
       <Image
         src={courtyard}
-        alt="Warm sunlight on a concrete garden-facing home."
+        alt="A luz quente do sol ilumina a fachada de concreto de uma casa voltada para o jardim."
         widths={[480, 720]}
         sizes="(min-width: 768px) 35vw, 100vw"
         format="webp"
@@ -34,11 +34,11 @@ import Arrow from '@/components/Arrow.astro';
     <form id="enquiry-form" class="enquiry-form" data-reveal>
       <div class="form-pair">
         <label>
-          Your name
+          Seu nome
           <input name="name" autocomplete="name" required maxlength="100" />
         </label>
         <label>
-          Email address
+          E-mail
           <input
             type="email"
             name="email"
@@ -49,39 +49,41 @@ import Arrow from '@/components/Arrow.astro';
         </label>
       </div>
       <label class="project-field">
-        Tell us about your project
+        Conte sobre o seu projeto
         <textarea
           name="project"
           rows="4"
           required
           minlength="10"
           maxlength="5000"
-          placeholder="A place, an idea, a different way of living…"
+          placeholder="Um lugar, uma ideia, um novo jeito de morar…"
         ></textarea>
       </label>
       <div class="form-bottom">
         <button type="submit" class="solid-link" disabled>
-          Prepare enquiry <Arrow />
+          Preparar mensagem <Arrow />
         </button>
         <p>
-          This is a concept studio. Prepare a brief to keep;
-          <br class="hidden lg:block" /> your details stay in your browser.
+          Este é um estúdio conceitual. Prepare um resumo do seu projeto;
+          <br class="hidden lg:block" /> seus dados ficam apenas no navegador.
         </p>
       </div>
       <noscript>
         <p class="body-copy mt-4">
-          Enable JavaScript to prepare and download your enquiry. This demo does
-          not send messages.
+          Ative o JavaScript para preparar e baixar sua mensagem. Esta
+          demonstração não envia mensagens.
         </p>
       </noscript>
       <div id="enquiry-result" class="enquiry-result" hidden tabindex="-1">
-        <p role="status">Your brief is ready. No message has been sent.</p>
+        <p role="status">
+          Seu resumo está pronto. Nenhuma mensagem foi enviada.
+        </p>
         <a
           id="enquiry-download"
           class="text-link mt-4"
-          download="word-project-enquiry.txt"
+          download="word-resumo-do-projeto.txt"
         >
-          Download your enquiry <Arrow direction="down" />
+          Baixar mensagem <Arrow direction="down" />
         </a>
       </div>
     </form>
