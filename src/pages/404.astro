@@ -1,0 +1,58 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Arrow from '@/components/Arrow.astro';
+---
+
+<BaseLayout
+  title="Página não encontrada | WORD"
+  description="Esta página não foi encontrada. Volte ao início e conheça a arquitetura da WORD."
+>
+  <div class="flex min-h-svh flex-col">
+    <header class="site-header page-gutter">
+      <a href="/" class="wordmark" aria-label="WORD — início">WORD</a>
+      <span class="eyebrow">Arquitetura e interiores</span>
+    </header>
+    <main
+      id="main-content"
+      tabindex="-1"
+      class="page-gutter flex flex-1 flex-col justify-center gap-10 py-16 md:grid md:grid-cols-2 md:items-center md:gap-16 md:py-24"
+    >
+      <p class="error-number" aria-hidden="true">404</p>
+      <div class="flex max-w-lg flex-col items-start gap-7">
+        <p class="eyebrow">Um novo caminho</p>
+        <h1 class="heading-editorial">Página não encontrada.</h1>
+        <p class="body-copy">
+          O endereço que você procura não está aqui. Volte ao início para
+          conhecer nossos espaços.
+        </p>
+        <a href="/" class="solid-link">
+          Voltar ao início <Arrow />
+        </a>
+      </div>
+    </main>
+    <footer class="page-gutter pb-7">
+      <p class="border-t border-rule pt-6 text-sm text-muted">
+        Espaços para desacelerar.
+      </p>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .solid-link:focus-visible {
+    outline-color: var(--color-ink);
+  }
+
+  .error-number {
+    font-size: clamp(112px, 25vw, 420px);
+    line-height: 0.85;
+    letter-spacing: -0.075em;
+  }
+
+  @media (max-width: 374px) {
+    header .eyebrow {
+      max-width: 12em;
+      text-align: right;
+    }
+  }
+</style>

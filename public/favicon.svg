@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#292d25"/><text x="7" y="46" fill="#eeeae2" font-family="Arial,sans-serif" font-size="44" letter-spacing="-4">W.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" fill="#eeeae2"/>
+  <path d="M17 11 47 7v47l-30-4Z" stroke="#292d25" stroke-width="4.5" stroke-linejoin="round"/>
+  <circle cx="25" cy="31" r="2.4" fill="#292d25"/>
+</svg>

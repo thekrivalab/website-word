@@ -28,6 +28,8 @@ npm run preview  # Serve the production build locally
 - `src/styles/global.css`: Tailwind entry point, theme tokens, and responsive styles.
 - `src/data/site.ts`: studio metadata and typed planned section identifiers.
 - `src/pages/index.astro`: composes the six page sections.
+- `src/pages/404.astro`: responsive custom error page with a link to the homepage;
+  the static build generates `dist/404.html`.
 - `src/components/sections/`: hero, studio, projects, philosophy, services, contact.
 - `src/components/`: navigation, footer, and the shared arrow icon.
 - `src/data/projects.ts`: typed fictional concept study content and image imports.
